@@ -142,12 +142,16 @@ function removeFriend(name) {
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('tournamentModal');
     const createBtn = document.getElementById('createTournamentBtn');
+    const createFirstBtn = document.getElementById('createFirstTournamentBtn');
     const closeBtn = document.querySelector('.close');
     const tournamentForm = document.getElementById('tournamentForm');
     const addFriendForm = document.getElementById('addFriendForm');
     const filterBtns = document.querySelectorAll('.filter-btn');
 
+    // Both create buttons should open the modal
     createBtn.onclick = () => modal.style.display = 'block';
+    createFirstBtn.onclick = () => modal.style.display = 'block';
+    
     closeBtn.onclick = () => modal.style.display = 'none';
     
     window.onclick = (event) => {
@@ -204,12 +208,6 @@ function joinTournament(tournamentId) {
     // This would typically involve an API call to join the tournament
     alert(`Joining tournament ${tournamentId}! This feature will be implemented soon.`);
 }
-
-// Function to handle create tournament button
-document.querySelector('.cta-button').addEventListener('click', () => {
-    // This would typically open a modal or navigate to create tournament page
-    alert('Create Tournament feature coming soon!');
-});
 
 // Add smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
